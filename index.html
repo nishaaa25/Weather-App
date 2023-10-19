@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="nav">
+        <nav>
+          <div class="logo"><h1>weather.io</h1></div>
+        </nav>
+        <div class="search-box">
+          <button class="search-btn">
+            <span class="material-icons-outlined"> search </span>
+          </button>
+          <input type="text" placeholder="Search city..." />
+        </div>
+    </div>
+    <div class="container">
+      <div class="left-panel">
+        <div class="current-details">
+          <div class="top">
+            <div class="left">
+              <h3>Now</h3>
+              <span class="current-temp"></span>
+              <p id="condition"></p>
+            </div>
+            <div class="right"><img src="#" class="current-weather-img" /></div>
+          </div>
+          <div class="date">
+            <span class="material-icons-outlined"> calendar_today </span>
+            <p></p>
+          </div>
+          <div class="city">
+            <span class="material-icons-outlined"> location_on </span>
+            <p id="city"></p>
+          </div>
+        </div>
+        <div class="forecast-details">
+          <h3>7 Days ForeCast</h3>
+          <div class="forecast-box">
+          </div>
+        </div>
+      </div>
+      <div class="right-panel">
+        <div class="highlights">
+          <h3>Today's Highlights</h3>
+          <div class="highlights-grid">
+            <div class="item item-one">
+              <h4>Temperature & Wind</h4>
+              <div class="flex">
+                <div class="icon">
+                  <span class="material-icons-outlined"> air </span>
+                </div>
+                <div class="max_temp">
+                  <span>Temp(°C)</span>
+                  <p class="temp_c value"></p>
+                </div>
+                <div class="min_temp">
+                  <span>Temp(°F)</span>
+                  <p class="temp_f value"></p>
+                </div>
+                <div class="wind_speed">
+                  <span>Wind(Km/H)</span>
+                  <p class="speed value"></p>
+                </div>
+                <div class="wind_degrees">
+                  <span>Wind(°)</span>
+                  <p class="degree value"></p>
+                </div>
+              </div>
+            </div>
+            <div class="item item-two">
+              <h4>Sunrise & Sunset</h4>
+              <div class="flex">
+                <div class="flex-item">
+                  <div class="icon">
+                    <span class="material-icons-outlined"> light_mode </span>
+                  </div>
+                  <div class="text">
+                    <span>Sunrise</span>
+                    <p class="sunrise value"></p>
+                  </div>
+                </div>
+                <div class="flex-item">
+                  <div class="icon">
+                    <span class="material-icons-outlined">wb_twilight</span>
+                  </div>
+                  <div class="text">
+                    <span>Sunset</span>
+                    <p class="sunset value"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item item-three">
+              <h4>Humidity(%)</h4>
+              <div class="flex">
+                <div class="icon">
+                  <span class="material-icons-outlined"> water_drop </span>
+                </div>
+                <p class="humidity value"></p>
+              </div>
+            </div>
+            <div class="item item-four">
+              <h4>Pressure(hPa)</h4>
+              <div class="flex">
+                <div class="icon">
+                  <span class="material-icons-outlined"> waves </span>
+                </div>
+                <p class="pressure value"></p>
+              </div>
+            </div>
+            <div class="item item-five">
+              <h4>UV</h4>
+              <div class="flex">
+                <div class="icon">
+                  <span class="material-icons-outlined"> brightness_6</span>
+                </div>
+                <p class="uv value"></p>
+              </div>
+            </div>
+            <div class="item item-six">
+              <h4>Feels Like(°C)</h4>
+              <div class="flex">
+                <div class="icon">
+                  <span class="material-icons-outlined"> thermostat</span>
+                </div>
+                <p class="feels_like value"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="forecast-heading">Today At</h3>
+        <div class="hour-forecast">
+        </div>
+      </div>
+    </div>
+    <script src="assets/index.js"></script>
+  </body>
+</html>
