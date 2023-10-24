@@ -40,12 +40,12 @@ function fetchWeather(cityName) {
           let days = response.forecast.forecastday;
 
           // Using For loop to display next 7days weather details
-          for (let i = 1; i < days.length; i++) {
+          for (let i = 0; i < days.length; i++) {
             let dayOfDate = new Date(days[i].date).toLocaleDateString([], {
               weekday: "long",
             });
             let date = new Date(days[i].date).toLocaleDateString([], {
-              month: "long",
+              month: "short",
               day: "numeric",
             });
             let day = document.createElement("div");
@@ -59,8 +59,8 @@ function fetchWeather(cityName) {
             forecastDaysCont.appendChild(day);
           }
         } else {
-          console.log("Error: Missing forecast data");
-          document.querySelector(".container").innerHTML = "<div class='error-box'><p class='error'>City Not Found</p></div>"
+          document.querySelector(".container").innerHTML =
+            "<div class='error-box'><p class='error'>City Not Found</p></div>";
         }
       });
 
